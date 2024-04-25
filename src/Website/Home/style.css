@@ -5,3 +5,17 @@
 .font-dmsans{
     font-family: "DM Sans", sans-serif;
 }
+
+.font-berkshire-swash{
+    font-family: "Berkshire Swash", serif;
+}
+
+.text-stroke{
+    -webkit-text-stroke:1.5px #5C0D00;
+    -webkit-text-fill-color:#B7351F;
+}
+
+.bg-image{
+    background-image: url('../../../Asset/petaindo-part2.png');
+    background-size: contain;
+}
