@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/Website/*.{html,js}"],
   theme: {
-    extend: {},
+    fontFamily:{
+      "clash-display":['Clash Display Variable','sans-serif']
+    },
+    extend: {
+    },
   },
   plugins: [],
 }

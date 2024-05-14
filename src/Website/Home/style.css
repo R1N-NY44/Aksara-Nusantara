@@ -15,27 +15,23 @@
     -webkit-text-fill-color:#B7351F;
 }
 
-.bg-image{
-    background-image: url('../../../Asset/petaindo-part2.png');
-    background-size: contain;
-}
-
-.shrink-size{
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-    height: 0vh;
-}
-
 .background{
     transform: translateZ(-10px) scale(2);
 }
 
 .wrapper{
-    perspective: 10px;
+    perspective: 15px;
 }
 
 .banner{
     transform-style: preserve-3d;
     z-index: -1;
+}
+
+.scroll-down header{
+        transform: translate3d(0,-100%,0);
+}
+
+.scroll-up header{
+        filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
 }
