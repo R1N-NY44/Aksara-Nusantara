@@ -43,9 +43,12 @@
     <title>AksaraNusantara - Home</title>
 </head>
 <body class="bg-[#FFEDC6]">
-        <header class="sticky top-0 left-0 z-50 px-10 py-10 w-full transition-all duration-300 ease-in-out">
+        <header id="header" x-data="stickyNavbar" class="sticky z-50 top-0 bg-[#FFEDC6] left-0  px-10 py-10 w-full transition-transform"
+        @scroll.window="handleScroll"
+        :class="hideNavbar ? '-translate-y-full' : 'translate-y-0'"
+        >
             <nav 
-            class="flex flex-row justify-between " 
+            class="flex flex-row justify-between" 
             x-data="{
                 links:[
                     {
@@ -90,57 +93,8 @@
 
             </nav>
         </header>
-        <main class="h-screen overflow-y-auto overflow-x-hidden wrapper pt-20">
+        <main class="overflow-x-hidden wrapper pt-20 background-image">
             <section class="w-full banner relative">
-                <!-- <div class="bg-image w-screen bg-cover bg-no-repeat bg-top h-full flex flex-row justify-center items-bottom background">
-                    <h2 class="font-berkshire-swash relative left-36 text-stroke text-[#B7351F] stroke-[#5C0D00] text-[4.5rem]">
-                        Jelajahi Keindahan
-                    </h2>
-                    <div class="flex h-[35rem]">
-                        <svg class="h-full relative -bottom-5 z-10" width="400" viewBox="0 0 294 591" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_217_99)">
-                            <path d="M194 510.062H111.591L100 510.401L101.546 487.583L127.816 107.401H168.119L182.412 328.935L182.925 336.677L194 510.062Z" fill="#F4DBBD"/>
-                            <mask id="mask0_217_99" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="122" y="0" width="50" height="80">
-                            <path d="M122 0H171.804V79.8875H122V0Z" fill="white"/>
-                            </mask>
-                            <g mask="url(#mask0_217_99)">
-                            <path d="M162.935 76.3864L132.642 79.4316C132.642 79.4316 125.703 75.6423 123.349 68.9244C122.288 66.1296 122.113 62.8341 123.524 59.103C128.407 46.4834 140.582 36.909 144.113 23.2298C148.523 6.06987 145.935 0.415054 145.524 -0.33252C146.876 0.850568 166.583 18.6312 170.581 41.9431C172.407 52.5738 170.934 64.4492 162.935 76.3864Z" fill="#FFBC00"/>
-                            </g>
-                            <path d="M162.816 76.3954L133.112 79.4009C133.112 79.4009 126.308 75.6609 124 69.0306C127.402 71.0579 133.805 71.3626 145.225 67.9272C162.584 62.7116 168.641 52.0367 170.313 42.4009C172.103 52.893 170.66 64.6137 162.816 76.3954Z" fill="#F47400"/>
-                            <path d="M194 510.061H111.59L100 510.401L101.546 487.546L167.474 477.14L182.926 336.401L194 510.061Z" fill="#E2C3A1"/>
-                            <path d="M286 517.401C278.407 519.702 271.677 522.556 265.808 525.874C246.393 536.741 235.435 551.848 229.479 563.362C224.474 573.124 223.008 580.401 223.008 580.401H65.0911C65.0911 574.046 63.4508 567.875 60.7751 562.163C52.4927 544.664 34.1127 530.846 20.7378 523.386C13.8336 519.519 9 517.401 9 517.401H286Z" fill="#F4DBBD"/>
-                            <path d="M285 517.401C277.435 519.705 270.729 522.562 264.881 525.881C245.534 536.76 234.616 551.876 228.684 563.401L186.209 546.346H101.86L60.589 562.202C52.3343 544.688 34.0202 530.859 20.6953 523.393C13.8174 519.521 9 517.401 9 517.401H285Z" fill="#E2C3A1"/>
-                            <path d="M286 517.401C278.38 519.847 271.623 522.879 265.736 526.401L19.7777 523.758C12.8519 519.651 8 517.401 8 517.401H286Z" fill="#876553"/>
-                            <mask id="mask1_217_99" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="508" width="295" height="13">
-                            <path d="M0 508.295H294.373V520.586H0V508.295Z" fill="white"/>
-                            </mask>
-                            <g mask="url(#mask1_217_99)">
-                            <path d="M0.437744 508.333H294.016V519.914H0.437744V508.333Z" fill="#F4DBBD"/>
-                            </g>
-                            <mask id="mask2_217_99" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="57" y="579" width="181" height="13">
-                            <path d="M57 579.404H237.953V591.256H57V579.404Z" fill="white"/>
-                            </mask>
-                            <g mask="url(#mask2_217_99)">
-                            <path d="M73.3776 580.118H61.1666L57.0974 590.923H237.81L233.119 580.118H73.3776Z" fill="#876553"/>
-                            </g>
-                            <path d="M186 83.4009V100.353L167.305 111.401H126.695L108 100.133V83.4009H186Z" fill="#E2C3A1"/>
-                            <path d="M108 83.4009H186V99.4009H108V83.4009Z" fill="#F4DBBD"/>
-                            <path d="M108 82.4009H186V87.4009H108V82.4009Z" fill="#876553"/>
-                            <path d="M108 75.4009H186V82.4009H108V75.4009Z" fill="#F4DBBD"/>
-                            <path d="M138 565.401H157V584.401H138V565.401Z" fill="#876553"/>
-                            </g>
-                            <defs>
-                            <clipPath id="clip0_217_99">
-                            <rect width="294.373" height="591.256" fill="white"/>
-                            </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    <h2 class="font-berkshire-swash relative right-36   text-stroke text-[#B7351F] stroke-[#5C0D00] text-[4.5rem]">
-                        Budaya Indonesia
-                    </h2>
-                </div> -->
-                <img src="../../../Asset/petaindo-part2.png" alt=""  class="background  absolute object-contain -z-10">
                 <div class="w-screen bg-cover bg-no-repeat bg-top h-full flex flex-row justify-center items-bottom">
                     <h2 class="font-berkshire-swash relative left-36 text-stroke text-[#B7351F] stroke-[#5C0D00] text-[4.5rem]">
                         Jelajahi Keindahan
@@ -342,7 +296,22 @@
                 </section>
             </section>
         </main>
-        <script src="home.js"></script>
-    <!-- <script src="home.js"></script> -->
+        <!-- <script src="home.js"></script> -->
+        <script>
+            document.addEventListener("alpine:init",()=>{
+                Alpine.data('stickyNavbar',()=>({
+                    hideNavbar:false,
+                    lastScrollTop:0,
+                    handleScroll(){
+                        let scrollTop = window.scrollY || document.documentElement.scrollTop;
+                        this.hideNavbar = scrollTop > this.lastScrollTop;
+                        this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+                        if(this.lastScrollTop){
+                            document.getElementById()
+                        }
+                    }
+                }))
+            })
+        </script>
 </body>
 </html>

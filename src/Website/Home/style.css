@@ -19,6 +19,11 @@
     transform: translateZ(-10px) scale(2);
 }
 
+.background-image{
+    background-image: url("../../../Asset/petaindo-part2.png");
+    background-size: contain;
+}
+
 .wrapper{
     perspective: 15px;
 }
@@ -26,12 +31,4 @@
 .banner{
     transform-style: preserve-3d;
     z-index: -1;
-}
-
-.scroll-down header{
-        transform: translate3d(0,-100%,0);
-}
-
-.scroll-up header{
-        filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
 }
