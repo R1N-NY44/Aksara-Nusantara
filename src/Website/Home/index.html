@@ -306,8 +306,10 @@
                         let scrollTop = window.scrollY || document.documentElement.scrollTop;
                         this.hideNavbar = scrollTop > this.lastScrollTop;
                         this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-                        if(this.lastScrollTop){
-                            document.getElementById()
+                        if(this.lastScrollTop > 10){
+                            document.getElementById("header").classList.add("shadow-md")
+                        }else{
+                            document.getElementById("header").classList.remove("shadow-md")
                         }
                     }
                 }))
