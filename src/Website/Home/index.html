@@ -42,7 +42,8 @@
     <link rel="stylesheet" href="style.css">
     <title>AksaraNusantara - Home</title>
 </head>
-<body class="bg-[#FFEDC6]">
+<body class="">
+    <section id="desktop" class="bg-[#FFEDC6]">
         <header id="header" x-data="stickyNavbar" class="sticky z-50 top-0 bg-[#FFEDC6] left-0  px-10 py-10 w-full transition-transform"
         @scroll.window="handleScroll"
         :class="hideNavbar ? '-translate-y-full' : 'translate-y-0'"
@@ -93,8 +94,8 @@
 
             </nav>
         </header>
-        <main class="overflow-x-hidden wrapper pt-20 background-image">
-            <section class="w-full banner relative">
+        <main class="overflow-x-hidden wrapper pt-20 background-image bg-no-repeat">
+            <section class="w-full banner relative z-40">
                 <div class="w-screen bg-cover bg-no-repeat bg-top h-full flex flex-row justify-center items-bottom">
                     <h2 class="font-berkshire-swash relative left-36 text-stroke text-[#B7351F] stroke-[#5C0D00] text-[4.5rem]">
                         Jelajahi Keindahan
@@ -266,54 +267,116 @@
                             <img src="../../../Asset/tumpeng.svg" alt="" class="w-[27rem] absolute -bottom-14 -right-[1rem] -rotate-12">
                 </section>
             </section>
-            <section class="h-[200vh] sticky top-0 transition-all bg-[#FFEDC6] z-20">
+            <section class="h-full transition-all bg-[#FFEDC6] z-30">
+
                <h1 x-data="{
                 text: 'Temukan dan eksplorasi ragam budaya, kuliner, serta kisah inspiratif dalam sebuah perjalanan digital yang menginspirasi.'
                }" x-text="text" class="font-dmsans text-4xl italic text-center w-[41rem] mx-auto mt-20 bg-gradient-to-b from-[#B7351F] via-[#BD5240] to-transparent text-transparent bg-clip-text">
                 </h1>
-                <section class="px-52 py-36">
+
+                <section class="px-52 py-36 relative">
                     <h1 x-data="{
                         text: 'Galeri Budaya'
-                    }" x-text="text" class="font-clash-display font-semibold text-3xl text-[#B7351F]"></h1>
+                    }" x-text="text" class="font-dmsans font-bold text-4xl text-[#B7351F]"></h1>
                     <p class="w-[45rem] font-dmsans text-[#858B76] text-xl py-5">Menyajikan koleksi foto dan video berkualitas tinggi yang memperkenalkan berbagai aspek budaya Indonesia. Dari tradisi hingga keindahan alam, setiap gambar dan klip video memperlihatkan kekayaan dan keunikan budaya yang memikat hati dan pikiran.</p>
                     <div class="grid grid-cols-2 text-center gap-5 relative">
                         <div class="relative col-span-2">
-                            <div class="before:w-full before:bg-gradient-to-b from-transparent to-black to-100% before:z-20 before:h-full before:absolute before:left-0 before:rounded-xl">
-                                <img src="../../../Asset/cultureBali_01.png" alt="" class="rounded-xl h-[40rem] w-full object-bottom object-cover">
+                            <div class="absolute flex flex-col items-start bottom-14 gap-y-4 z-30 left-14 font-dmsans text-white">
+                                <h1 class="font-bold text-4xl">Daerah</h1>
+                                <p class="w-[60%] text-left text-xl">Telusuri  galeri berdasarkan berbagai macam daerah di Indonesia.
+                                </p>
+                            </div>
+
+                            <div class="before:w-full before:bg-gradient-to-b from-transparent to-black to-100% before:z-20 before:h-full before:absolute before:left-0 before:rounded-2xl">
+                                <img src="../../../Asset/cultureBali_01.png" alt="" class="rounded-2xl h-[40rem] w-full object-bottom object-cover">
                             </div>
                         </div>
                         <div class="relative">
+                            <div class="absolute flex flex-col items-start bottom-14 gap-y-4 z-30 left-14 font-dmsans text-white">
+                                <h1 class="font-bold text-4xl">Tema</h1>
+                                <p class="w-[60%] text-left text-xl">Temukan galeri berdasarkan tema tertentu, seperti seni tradisional atau upacara adat.
+                                </p>
+                            </div>
                             <div class="before:w-full before:bg-gradient-to-b from-transparent to-black to-100% before:z-20 before:h-full before:absolute before:left-0 before:rounded-xl">
                                 <img src="../../../Asset/wayang.png" alt="" class="rounded-xl">
                             </div>
                         </div>
                         <div class="relative">
+                            <div class="absolute flex flex-col items-start bottom-14 gap-y-4 z-30 left-14 font-dmsans text-white">
+                                <h1 class="font-bold text-4xl">Jenis Budaya</h1>
+                                <p class="w-[60%] text-left text-xl">Telusuri galeri berdasarkan jenis budaya, seperti rumah adat atau kerajinan tangan lokal.
+
+                                </p>
+                            </div>
                             <div class="before:w-full before:bg-gradient-to-b from-transparent to-black to-100% before:z-20 before:h-full before:absolute before:left-0 before:rounded-xl">
                                 <img src="../../../Asset/topeng.png" alt="" class="rounded-xl">
                             </div>
                         </div>
                     </div>
+                    <img src="../../../Asset/awans1.svg" alt="" class="absolute bottom-5 z-30 left-0 w-[27rem]">
+                    <img src="../../../Asset/awans2.svg" alt="" class="absolute bottom-5 z-30 right-0 w-[27rem]">
+                </section>
+                    
+                <section class="py-36 relative">
+                    <h1 x-data="{
+                        text:'Kuliner Nusantara'
+                    }" x-text="text" class="font-dmsans font-bold text-4xl text-[#B7351F] px-52" >
+                    </h1>
+                    <p x-data="{
+                        text:'Eksplor kekayaan ragam kuliner Indonesia, termasuk resep autentik, cerita tentang makanan, dan rekomendasi tempat makan terkenal.'
+                    }" x-text="text" class="font-dmsans text-[#858B76] text-xl py-5 px-52 w-[56rem]"></p>
+                    <swiper-container id="kuliner-nusantara" slides-per-view="2.5" speed="500" loop="true" css-mode="true"
+                    x-data="{
+                        items:[
+                            {
+                                id:1,
+                                label:'Masakan Tradisonal',
+                                image:'../Home/index.html'
+                            },
+                            {
+                                id:2,
+                                label:'Masakan Tradisonal',
+                                image:'../Home/index.html'
+                            },
+                            {
+                                id:3,
+                                label:'Masakan Tradisonal',
+                                image:'../Home/index.html'
+                            },
+                            {
+                                id:4,
+                                label:'Masakan Tradisonal',
+                                image:'../Home/index.html'
+                            },
+                            {
+                                id:5,
+                                label:'Masakan Tradisonal',
+                                image:'../Home/index.html'
+                            },
+                            {
+                                id:6,
+                                label:'Masakan Tradisonal',
+                                image:'../Home/index.html'
+                            },
+                        ],
+                    }"
+                    >
+                        <template x-for="item in items" :key="item.id">
+                            <swiper-slide x-text="item.label"></swiper-slide>
+                        </template>
+                      </swiper-container>
                 </section>
             </section>
         </main>
-        <!-- <script src="home.js"></script> -->
-        <script>
-            document.addEventListener("alpine:init",()=>{
-                Alpine.data('stickyNavbar',()=>({
-                    hideNavbar:false,
-                    lastScrollTop:0,
-                    handleScroll(){
-                        let scrollTop = window.scrollY || document.documentElement.scrollTop;
-                        this.hideNavbar = scrollTop > this.lastScrollTop;
-                        this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-                        if(this.lastScrollTop > 10){
-                            document.getElementById("header").classList.add("shadow-md")
-                        }else{
-                            document.getElementById("header").classList.remove("shadow-md")
-                        }
-                    }
-                }))
-            })
-        </script>
+    </section>
+
+    <section id="mobile" class="h-screen w-full flex flex-col gap-5 justify-center items-center bg-[#FFEDC6] text-[#B7351F] font-dmsans font-bold">
+        <h1>Sorry this site is only available for Desktop</h1>
+        <button onclick="isReload()" class="p-3 text-sm rounded-xl bg-[#B7351F] text-[#FFEDC6]">
+            Refresh, when on desktop
+        </button>
+    </section>
+    <script src="home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </body>
 </html>

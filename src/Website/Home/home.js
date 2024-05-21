@@ -1,28 +1,3 @@
-// const body = document.body
-// let lastScroll = 0
-// const header = document.getElementById('header')
-
-const { default: Alpine } = require("alpinejs")
-
-// window.addEventListener("scroll", () => {
-//     const currentScroll = window.scrollY;
-//     if (currentScroll <= 0){
-//         body.classList.add("scroll-up");
-//         header.classList.remove("shadow-md")
-//         return;
-//     }
-//     console.log(currentScroll)
-//     if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-//         body.classList.remove("scroll-up");
-//         body.classList.add("scroll-down");
-//     }else if(currentScroll < lastScroll && body.classList.contains("scroll-down")){
-//         body.classList.remove("scroll-down");
-//         body.classList.add("scroll-up");
-//         header.classList.add("shadow-md")
-//     }
-//     lastScroll = currentScroll
-//     console.log(lastScroll)
-// })
 document.addEventListener("alpine:init",()=>{
     Alpine.data('stickyNavbar',()=>({
         hideNavbar:false,
@@ -31,7 +6,51 @@ document.addEventListener("alpine:init",()=>{
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             this.hideNavbar = scrollTop > this.lastScrollTop;
             this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            if(this.lastScrollTop > 10){
+                document.getElementById("header").classList.add("shadow-md")
+            }else{
+                document.getElementById("header").classList.remove("shadow-md")
+            }
         }
     }))
 })
 
+function isMobile() {
+    const desktop = document.getElementById("desktop");
+    const mobile = document.getElementById("mobile")
+    if (navigator.maxTouchPoints > 0 && /Android|iPhone/i.test(navigator.userAgent)) {
+        desktop.classList.add("hidden")
+        mobile.classList.remove("hidden")
+    } else {
+        desktop.classList.remove("hidden")
+        mobile.classList.add("hidden")
+    }
+}
+console.log(isMobile())
+
+function isReload(){
+    return window.location.reload()
+}
+
+ // swiper for Rekomendasi Warung
+const KulinerNusantaraCarousel = document.getElementById('kuliner-nusantara')
+// swiper parameters
+const KulinerNusantaraCarouselParams = {
+      slidesPerView: 1,
+      breakpoints: {
+        640: {
+        },
+        1024: {
+            slidesPerView: 2.5
+        },
+      },
+      on: {
+        init() {
+          // ...
+        },
+      },
+};
+// now we need to assign all parameters to Swiper element
+Object.assign(KulinerNusantaraCarousel, KulinerNusantaraCarouselParams);
+// and now initialize it
+KulinerNusantaraCarousel.initialize();
