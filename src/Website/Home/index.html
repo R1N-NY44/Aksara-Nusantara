@@ -325,7 +325,7 @@
                     <p x-data="{
                         text:'Eksplor kekayaan ragam kuliner Indonesia, termasuk resep autentik, cerita tentang makanan, dan rekomendasi tempat makan terkenal.'
                     }" x-text="text" class="font-dmsans text-[#858B76] text-xl py-5 px-52 w-[56rem]"></p>
-                    <swiper-container id="kuliner-nusantara" slides-per-view="2.5" speed="500" loop="true" css-mode="true"
+                    <swiper-container id="kuliner-nusantara" mousewheel="true" loop="true" css-mode="true" direction="horizontal"
                     x-data="{
                         items:[
                             {
@@ -360,11 +360,12 @@
                             },
                         ],
                     }"
+                    class="w-full"
                     >
                         <template x-for="item in items" :key="item.id">
-                            <swiper-slide x-text="item.label"></swiper-slide>
+                            <swiper-slide x-text="item.label" class="flex justify-center items-center border border-[#B7351F] h-96"></swiper-slide>
                         </template>
-                      </swiper-container>
+                    </swiper-container>
                 </section>
             </section>
         </main>
@@ -376,7 +377,7 @@
             Refresh, when on desktop
         </button>
     </section>
-    <script src="home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="home.js"></script>
 </body>
 </html>

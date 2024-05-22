@@ -26,7 +26,7 @@ function isMobile() {
         mobile.classList.add("hidden")
     }
 }
-console.log(isMobile())
+isMobile()
 
 function isReload(){
     return window.location.reload()
@@ -36,9 +36,11 @@ function isReload(){
 const KulinerNusantaraCarousel = document.getElementById('kuliner-nusantara')
 // swiper parameters
 const KulinerNusantaraCarouselParams = {
-      slidesPerView: 1,
+      slidesPerView: 2.5,
+      spaceBetween: 30,
       breakpoints: {
         640: {
+            slidesPerView:1
         },
         1024: {
             slidesPerView: 2.5
