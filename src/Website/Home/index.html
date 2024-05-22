@@ -317,7 +317,7 @@
                     <img src="../../../Asset/awans2.svg" alt="" class="absolute bottom-5 z-30 right-0 w-[27rem]">
                 </section>
                     
-                <section class="py-36 relative">
+                <section class="pt-36 relative h-screen">
                     <h1 x-data="{
                         text:'Kuliner Nusantara'
                     }" x-text="text" class="font-dmsans font-bold text-4xl text-[#B7351F] px-52" >
@@ -325,46 +325,36 @@
                     <p x-data="{
                         text:'Eksplor kekayaan ragam kuliner Indonesia, termasuk resep autentik, cerita tentang makanan, dan rekomendasi tempat makan terkenal.'
                     }" x-text="text" class="font-dmsans text-[#858B76] text-xl py-5 px-52 w-[56rem]"></p>
-                    <swiper-container id="kuliner-nusantara" mousewheel="true" loop="true" css-mode="true" direction="horizontal"
+                    <swiper-container id="kuliner-nusantara" direction="horizontal"
                     x-data="{
                         items:[
                             {
                                 id:1,
                                 label:'Masakan Tradisonal',
-                                image:'../Home/index.html'
+                                image:'../../../Asset/sate.jpg'
                             },
                             {
                                 id:2,
                                 label:'Masakan Tradisonal',
-                                image:'../Home/index.html'
+                                image:'../../../Asset/nasi.jpg'
                             },
                             {
                                 id:3,
                                 label:'Masakan Tradisonal',
-                                image:'../Home/index.html'
-                            },
-                            {
-                                id:4,
-                                label:'Masakan Tradisonal',
-                                image:'../Home/index.html'
-                            },
-                            {
-                                id:5,
-                                label:'Masakan Tradisonal',
-                                image:'../Home/index.html'
-                            },
-                            {
-                                id:6,
-                                label:'Masakan Tradisonal',
-                                image:'../Home/index.html'
+                                image:'../../../Asset/warung.jpg'
                             },
                         ],
                     }"
                     class="w-full"
                     >
-                        <template x-for="item in items" :key="item.id">
-                            <swiper-slide x-text="item.label" class="flex justify-center items-center border border-[#B7351F] h-96"></swiper-slide>
-                        </template>
+                        <!-- <template x-for="item in items" :key="item.id">
+                            <swiper-slide x-text="item.label" class="flex justify-center relative items-center border border-[#B7351F] h-96 rounded-xl">
+                                <img :src="item.image" x-bi="">
+                            </swiper-slide>
+                        </template> -->
+                        <!-- <swiper-slide id="item" class="flex justify-center relative items-center border border-[#B7351F] h-96 rounded-xl">
+                            
+                        </swiper-slide> -->
                     </swiper-container>
                 </section>
             </section>
