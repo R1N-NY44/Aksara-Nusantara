@@ -32,3 +32,6 @@
     transform-style: preserve-3d;
     z-index: -1;
 }
+.swiper-slide{
+    width: 400px;;
+}
