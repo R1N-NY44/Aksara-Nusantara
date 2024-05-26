@@ -2,9 +2,6 @@ import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs
 const KulinerNusantaraCarousel = new Swiper(".swiper1",{
     slidesPerView: 2.5,
     spaceBetween: 30,
-    mousewheel: {
-        invert: false,
-    },
     direction:"horizontal",
     slidesOffsetAfter: 210,
     slidesOffsetBefore: 210,
@@ -26,9 +23,6 @@ const KisahInspiratifCarousel = new Swiper(KisahInspiratifCarouselClassName,{
    slidesPerView: 1,
    spaceBetween: 30,
    direction:'horizontal',
-   mousewheel: {
-     invert: false,
-   },
    breakpoints: {
      640: {
          slidesPerView: 1
@@ -37,6 +31,8 @@ const KisahInspiratifCarousel = new Swiper(KisahInspiratifCarouselClassName,{
          slidesPerView: 1
      },
    },
+   slidesOffsetAfter: 210,
+   slidesOffsetBefore: 210,
    navigation: {
      nextEl:KisahInspiratifCarouselNext,
      prevEl:KisahInspiratifCarouselPrev

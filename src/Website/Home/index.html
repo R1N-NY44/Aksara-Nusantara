@@ -40,11 +40,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Berkshire+Swash&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./Asset/CSS/style.css">
-    <!-- <link
-    rel="stylesheet"
-    href="./Asset/JS/swiper-bundle.min.css"
-    />
-    <script src="./Asset/JS/swiper-bundle.min.js"></script> -->
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -95,7 +90,7 @@
                     <h1 class="font-semibold font-aclonica text-[#B7351F]">AksaraNusantara</h1>
                 </div>
                 
-                <ul class="flex flex-row items-center justify-center w-full  gap-5">
+                <ul class="flex flex-row items-center justify-center w-full gap-5">
                     <template x-for="link in links" :key="link.id">
                         <li>
                             <a :href=link.url  x-text="link.label" x-on:click="currentRoute = link.url" class="font-dmsans text-[#858B76] text-md  transition-all " x-bind:class=" currentRoute === link.url && 'font-bold text-black' "></a>
@@ -112,7 +107,6 @@
                         Jelajahi Keindahan
                     </h2>
                     <div class="flex h-[35rem]">
-                        <!-- <img src="../../../Asset/monas.svg" alt="" class="h-full"> -->
                         <svg class="h-full relative -bottom-5 z-10" width="400" viewBox="0 0 294 591" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_217_99)">
                             <path d="M194 510.062H111.591L100 510.401L101.546 487.583L127.816 107.401H168.119L182.412 328.935L182.925 336.677L194 510.062Z" fill="#F4DBBD"/>
@@ -239,7 +233,6 @@
                             <path d="M3.06665 361.138H363.921V372.729H3.06665V361.138Z" fill="#603813"/>
                             </g>
                         </svg>
-                        <!-- <svg class="absolute -top-[50rem]" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" zoomAndPan="magnify" viewBox="0 0 810 809.999993" height="1000" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="649cba2ece"><path d="M 377 81 L 437 81 L 437 172 L 377 172 Z M 377 81 " clip-rule="nonzero"/></clipPath><clipPath id="e4f976a670"><path d="M 227.359375 660 L 582 660 L 582 674 L 227.359375 674 Z M 227.359375 660 " clip-rule="nonzero"/></clipPath><clipPath id="a31758cad5"><path d="M 294 741 L 512 741 L 512 754.5 L 294 754.5 Z M 294 741 " clip-rule="nonzero"/></clipPath></defs><path fill="#f4dbbd" d="M 462.15625 661.851562 L 363.011719 661.851562 L 349.066406 662.238281 L 350.925781 636.230469 L 382.53125 202.90625 L 431.019531 202.90625 L 448.214844 455.40625 L 448.832031 464.230469 Z M 462.15625 661.851562 " fill-opacity="1" fill-rule="nonzero"/><g clip-path="url(#649cba2ece)"><path fill="#ffbc00" d="M 426.316406 168.011719 L 389.820312 171.480469 C 389.820312 171.480469 381.460938 167.164062 378.625 159.511719 C 377.347656 156.328125 377.136719 152.574219 378.835938 148.324219 C 384.71875 133.949219 399.386719 123.042969 403.640625 107.460938 C 408.953125 87.914062 405.835938 81.472656 405.339844 80.621094 C 406.96875 81.96875 430.710938 102.222656 435.527344 128.777344 C 437.726562 140.886719 435.953125 154.414062 426.316406 168.011719 Z M 426.316406 168.011719 " fill-opacity="1" fill-rule="nonzero"/></g><path fill="#f47400" d="M 426.316406 168.011719 L 389.820312 171.480469 C 389.820312 171.480469 381.460938 167.164062 378.625 159.511719 C 382.804688 161.851562 390.671875 162.203125 404.703125 158.238281 C 426.03125 152.21875 433.472656 139.898438 435.527344 128.777344 C 437.726562 140.886719 435.953125 154.414062 426.316406 168.011719 Z M 426.316406 168.011719 " fill-opacity="1" fill-rule="nonzero"/><path fill="#e2c3a1" d="M 462.144531 661.851562 L 363.019531 661.851562 L 349.078125 662.238281 L 350.9375 636.234375 L 430.238281 624.394531 L 448.824219 464.265625 Z M 462.144531 661.851562 " fill-opacity="1" fill-rule="nonzero"/><path fill="#f4dbbd" d="M 574.476562 670.59375 C 565.308594 673.195312 557.183594 676.421875 550.097656 680.171875 C 526.65625 692.457031 513.425781 709.535156 506.234375 722.550781 C 500.191406 733.585938 498.421875 741.8125 498.421875 741.8125 L 307.757812 741.8125 C 307.757812 734.628906 305.777344 727.652344 302.546875 721.195312 C 292.546875 701.414062 270.355469 685.792969 254.207031 677.359375 C 245.871094 672.988281 240.035156 670.59375 240.035156 670.59375 Z M 574.476562 670.59375 " fill-opacity="1" fill-rule="nonzero"/><path fill="#e2c3a1" d="M 573.648438 670.59375 C 564.527344 673.183594 556.441406 676.394531 549.390625 680.125 C 526.0625 692.351562 512.898438 709.339844 505.746094 722.292969 L 454.53125 703.125 L 352.828125 703.125 L 303.066406 720.945312 C 293.113281 701.261719 271.03125 685.71875 254.964844 677.328125 C 246.671875 672.976562 240.863281 670.59375 240.863281 670.59375 Z M 573.648438 670.59375 " fill-opacity="1" fill-rule="nonzero"/><path fill="#876553" d="M 574.558594 670.59375 C 565.386719 673.222656 557.253906 676.480469 550.167969 680.265625 L 254.128906 677.425781 C 245.792969 673.011719 239.953125 670.59375 239.953125 670.59375 Z M 574.558594 670.59375 " fill-opacity="1" fill-rule="nonzero"/><g clip-path="url(#e4f976a670)"><path fill="#f4dbbd" d="M 227.886719 660.042969 L 581.570312 660.042969 L 581.570312 673.234375 L 227.886719 673.234375 Z M 227.886719 660.042969 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#a31758cad5)"><path fill="#876553" d="M 313.730469 741.8125 L 299.019531 741.8125 L 294.117188 754.121094 L 511.828125 754.121094 L 506.175781 741.8125 Z M 313.730469 741.8125 " fill-opacity="1" fill-rule="nonzero"/></g><path fill="#e2c3a1" d="M 453.628906 175.816406 L 453.628906 195.027344 L 431.167969 207.546875 L 382.378906 207.546875 L 359.917969 194.777344 L 359.917969 175.816406 Z M 453.628906 175.816406 " fill-opacity="1" fill-rule="nonzero"/><path fill="#f4dbbd" d="M 359.921875 175.8125 L 453.628906 175.8125 L 453.628906 194.390625 L 359.921875 194.390625 Z M 359.921875 175.8125 " fill-opacity="1" fill-rule="nonzero"/><path fill="#876553" d="M 359.921875 175.039062 L 453.628906 175.039062 L 453.628906 180.457031 L 359.921875 180.457031 Z M 359.921875 175.039062 " fill-opacity="1" fill-rule="nonzero"/><path fill="#f4dbbd" d="M 359.921875 167.304688 L 453.628906 167.304688 L 453.628906 175.046875 L 359.921875 175.046875 Z M 359.921875 167.304688 " fill-opacity="1" fill-rule="nonzero"/><path fill="#876553" d="M 394.171875 725.105469 L 416.164062 725.105469 L 416.164062 747.082031 L 394.171875 747.082031 Z M 394.171875 725.105469 " fill-opacity="1" fill-rule="nonzero"/></svg> -->
                         <div>
                             <img src="../../../Asset/rumah-padang.svg" alt="" class="absolute -top-80 left-[26.5rem] z-20 w-[23%]">
                             <img src="../../../Asset/person2-new.svg" alt="" class="absolute bottom-48 left-[24%] w-[5%] z-20">
@@ -340,12 +333,25 @@
                     }" x-text="text" class="font-dmsans text-[#858B76] text-xl py-5 px-52 w-[56rem]"></p>
 
 
-                    <div class="swiper swiper1 w-screen">
+                    <div class="swiper swiper1">
                         <div class="swiper-wrapper">
                             <template x-for="item in itemsKulinerNusantara" :key="item.id">
-                                <div class="swiper-slide rounded-xl h-96 overflow-hidden">
-                                    <img :src="item.image" alt="" class="w-full h-full object-cover">
-                                    <h1 x-text="item.title" class="absolute z-20 top-1/3 right-1/2"></h1>
+                                <div class="swiper-slide rounded-xl overflow-hidden">
+                                    <div class="flex m-auto justify-center items-center relative h-96 group before:bg-gradient-to-b before:from-transparent before:to-black/80 before:w-full before:h-full before:absolute before:top-0 before:left-0 before:z-20">
+                                        <img :src="item.image" alt="" class="w-full h-full relative object-cover">
+                                        <h1 id="initial-text" x-text="item.title" class="absolute z-20 bottom-10 left-10 text-white transition-all duration-300 font-semibold opacity-100 font-dmsans text-4xl group-hover:-bottom-10 group-hover:opacity-0"></h1>
+                                        <div class="flex flex-col justify-center  z-20 w-full px-14 absolute opacity-0 -bottom-10 transition-all duration-300 group-hover:bottom-[3rem] group-hover:opacity-100">
+                                            <div class="flex flex-row justify-between relative w-full">
+                                                <h1 x-text="item.title" class="text-white font-bold line-clamp-3 w-96 font-dmsans text-6xl"></h1>
+                                                <a href="#" class="absolute right-10 backdrop-blur-lg w-24 h-24 flex flex-row justify-center items-center rounded-full border border-white">
+                                                    <svg width="25" height="28" viewBox="0 0 25 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M24.6381 20.0875L22.7967 0.972266L3.67213 2.71444C3.47041 2.70614 3.26925 2.74127 3.08228 2.81747C2.89531 2.89367 2.7269 3.00915 2.58844 3.1561C2.44998 3.30304 2.34471 3.47802 2.27976 3.66918C2.2148 3.86035 2.19168 4.06324 2.21195 4.26411C2.23222 4.46499 2.29542 4.65917 2.39726 4.8335C2.49911 5.00783 2.63721 5.15825 2.80224 5.27456C2.96727 5.39088 3.15536 5.47038 3.35378 5.50768C3.55221 5.54498 3.75633 5.53922 3.95233 5.49078L18.2855 4.20763L1.0832 24.9674C0.844706 25.2552 0.73032 25.626 0.765195 25.9981C0.800069 26.3703 0.981353 26.7134 1.26916 26.9518C1.55698 27.1903 1.92774 27.3047 2.29989 27.2698C2.67205 27.235 3.0151 27.0537 3.25359 26.7659L20.4558 6.00609L21.858 20.3281C21.8943 20.7003 22.0769 21.0429 22.3657 21.2805C22.6545 21.5181 23.0259 21.6312 23.3981 21.595C23.7703 21.5588 24.1129 21.3762 24.3505 21.0874C24.5881 20.7986 24.7013 20.4272 24.6651 20.055L24.6381 20.0875Z" fill="white"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <p x-text="item.desc" class="w-80 text-white text-xl"></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </template>
                         </div>
@@ -360,7 +366,7 @@
                     <div  x-data="itemsList" class="swiper swiper2 w-screen">
                         <div class="swiper-wrapper">
                             <template x-for="item in itemsKisahInspiratif">
-                                <div class="swiper-slide">
+                                <div class="swiper-slide flex justify-between w-96">
                                     <img :src="item.image" alt="item.title">
                                     <h1 x-text="item.title"></h1>
                                 </div>
