@@ -39,7 +39,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Berkshire+Swash&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./Asset/CSS/style.css">
+    <link
+    rel="stylesheet"
+    href="./Asset/JS/swiper-bundle.min.css"
+    />
+    <script src="./Asset/JS/swiper-bundle.min.js"></script>
     <title>AksaraNusantara - Home</title>
 </head>
 <body class="">
@@ -267,14 +272,14 @@
                             <img src="../../../Asset/tumpeng.svg" alt="" class="w-[27rem] absolute -bottom-14 -right-[1rem] -rotate-12">
                 </section>
             </section>
-            <section class="h-full transition-all bg-[#FFEDC6] z-30">
+            <section class="transition-all bg-[#FFEDC6] z-30">
 
                <h1 x-data="{
                 text: 'Temukan dan eksplorasi ragam budaya, kuliner, serta kisah inspiratif dalam sebuah perjalanan digital yang menginspirasi.'
                }" x-text="text" class="font-dmsans text-4xl italic text-center w-[41rem] mx-auto mt-20 bg-gradient-to-b from-[#B7351F] via-[#BD5240] to-transparent text-transparent bg-clip-text">
                 </h1>
 
-                <section class="px-52 py-36 relative">
+                <section class="px-52 py-28 relative">
                     <h1 x-data="{
                         text: 'Galeri Budaya'
                     }" x-text="text" class="font-dmsans font-bold text-4xl text-[#B7351F]"></h1>
@@ -317,7 +322,7 @@
                     <img src="../../../Asset/awans2.svg" alt="" class="absolute bottom-5 z-30 right-0 w-[27rem]">
                 </section>
                     
-                <section class="pt-36 relative h-screen">
+                <section class="py-36 relative">
                     <h1 x-data="{
                         text:'Kuliner Nusantara'
                     }" x-text="text" class="font-dmsans font-bold text-4xl text-[#B7351F] px-52" >
@@ -325,18 +330,24 @@
                     <p x-data="{
                         text:'Eksplor kekayaan ragam kuliner Indonesia, termasuk resep autentik, cerita tentang makanan, dan rekomendasi tempat makan terkenal.'
                     }" x-text="text" class="font-dmsans text-[#858B76] text-xl py-5 px-52 w-[56rem]"></p>
-                    <swiper-container id="kuliner-nusantara" direction="horizontal"
-                    class="w-full"
-                    >
-                        <!-- <template x-for="item in items" :key="item.id">
-                            <swiper-slide x-text="item.label" class="flex justify-center relative items-center border border-[#B7351F] h-96 rounded-xl">
-                                <img :src="item.image" x-bi="">
-                            </swiper-slide>
-                        </template> -->
-                        <!-- <swiper-slide id="item" class="flex justify-center relative items-center border border-[#B7351F] h-96 rounded-xl">
-                            
-                        </swiper-slide> -->
-                    </swiper-container>
+
+                    <div class="swiper swiper1 w-full">
+                        <div class="swiper-wrapper">
+                        </div>
+                    </div>
+
+                </section>
+
+                <section x-data="{
+                    title:'Kisah Inspiratif dan Rencana Aksi Lingkungan'
+                }" class="pb-20">
+                    <h1 x-text="title" class="font-dmsans font-bold text-4xl text-[#B7351F] w-[55rem]  px-52 pb-10"></h1>
+                    <div class="swiper swiper2 w-screen">
+                        <div class="swiper-wrapper">
+                        </div>
+                        <button class="swiper-button-prev">prev</button>
+                        <button class="swiper-button-next">next</button>
+                    </div>
                 </section>
             </section>
         </main>
@@ -348,7 +359,6 @@
             Refresh, when on desktop
         </button>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-    <script src="home.js"></script>
+    <script src="./Asset/JS/home.js"></script>
 </body>
 </html>
