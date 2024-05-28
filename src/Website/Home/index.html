@@ -39,6 +39,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Berkshire+Swash&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./Asset/CSS/style.css">
     <link
     rel="stylesheet"
@@ -273,15 +274,15 @@
             </section>
             <section class="transition-all bg-[#FFEDC6] z-30">
 
-               <h1 x-data="{
-                text: 'Temukan dan eksplorasi ragam budaya, kuliner, serta kisah inspiratif dalam sebuah perjalanan digital yang menginspirasi.'
-               }" x-text="text" class="font-dmsans text-4xl italic text-center w-[41rem] mx-auto mt-20 bg-gradient-to-b from-[#B7351F] via-[#BD5240] to-transparent text-transparent bg-clip-text">
+                <h1 x-data="{
+                    text: 'Temukan dan eksplorasi ragam budaya, kuliner, serta kisah inspiratif dalam sebuah perjalanan digital yang menginspirasi.'
+                }" x-text="text" class="font-dmsans text-4xl italic text-center w-[41rem] mx-auto mt-20 bg-gradient-to-b from-[#B7351F] via-[#BD5240] to-transparent text-transparent bg-clip-text leading-[1.500]">
                 </h1>
 
                 <section class="px-52 py-28 relative">
                     <h1 x-data="{
                         text: 'Galeri Budaya'
-                    }" x-text="text" class="font-dmsans font-bold text-4xl text-[#B7351F]"></h1>
+                    }" x-text="text" class=" font-clash-display font-semibold text-4xl text-[#B7351F]"></h1>
                     <p class="w-[45rem] font-dmsans text-[#858B76] text-xl py-5">Menyajikan koleksi foto dan video berkualitas tinggi yang memperkenalkan berbagai aspek budaya Indonesia. Dari tradisi hingga keindahan alam, setiap gambar dan klip video memperlihatkan kekayaan dan keunikan budaya yang memikat hati dan pikiran.</p>
                     <div class="grid grid-cols-2 text-center gap-5 relative">
                         <div class="relative col-span-2">
@@ -321,12 +322,12 @@
                     <img src="../../../Asset/awans2.svg" alt="" class="absolute bottom-5 z-30 right-0 w-[27rem]">
                 </section>
                     
-                <section class="py-36 relative" x-data="itemsList"
+                <section class="pt-24 relative h-[50rem]" x-data="itemsList"
                 >
                     <h1 x-data="{
 
                         text:'Kuliner Nusantara'
-                    }" x-text="text" class="font-dmsans font-bold text-4xl text-[#B7351F] px-52" >
+                    }" x-text="text" class="font-clash-display font-semibold text-4xl text-[#B7351F] px-52" >
                     </h1>
                     <p x-data="{
                         text:'Eksplor kekayaan ragam kuliner Indonesia, termasuk resep autentik, cerita tentang makanan, dan rekomendasi tempat makan terkenal.'
@@ -336,14 +337,14 @@
                     <div class="swiper swiper1">
                         <div class="swiper-wrapper">
                             <template x-for="item in itemsKulinerNusantara" :key="item.id">
-                                <div class="swiper-slide rounded-xl overflow-hidden">
-                                    <div class="flex m-auto justify-center items-center relative h-96 group before:bg-gradient-to-b before:from-transparent before:to-black/80 before:w-full before:h-full before:absolute before:top-0 before:left-0 before:z-20">
+                                <div class="swiper-slide rounded-2xl overflow-hidden h-full group">
+                                    <div class="flex m-auto justify-center items-center relative h-96 group-hover:h-[30rem] group-hover:flex group-hover:justify-center group-hover:items-center group-hover:m-auto  transition-all duration-300  before:bg-gradient-to-b before:from-transparent before:to-black/80 before:w-full before:h-full before:absolute before:top-0 before:left-0 before:z-20">
                                         <img :src="item.image" alt="" class="w-full h-full relative object-cover">
                                         <h1 id="initial-text" x-text="item.title" class="absolute z-20 bottom-10 left-10 text-white transition-all duration-300 font-semibold opacity-100 font-dmsans text-4xl group-hover:-bottom-10 group-hover:opacity-0"></h1>
-                                        <div class="flex flex-col justify-center  z-20 w-full px-14 absolute opacity-0 -bottom-10 transition-all duration-300 group-hover:bottom-[3rem] group-hover:opacity-100">
+                                        <div class="flex flex-col justify-center z-20 w-full px-14 absolute opacity-0 -bottom-10 transition-all duration-300 group-hover:bottom-[5.5rem] group-hover:opacity-100">
                                             <div class="flex flex-row justify-between relative w-full">
                                                 <h1 x-text="item.title" class="text-white font-bold line-clamp-3 w-96 font-dmsans text-6xl"></h1>
-                                                <a href="#" class="absolute right-10 backdrop-blur-lg w-24 h-24 flex flex-row justify-center items-center rounded-full border border-white">
+                                                <a href="#" class="absolute right-10 backdrop-blur-lg bg-gradient-to-l from-[#AFCA46] to-[#89AA32]  w-24 h-24 flex flex-row justify-center items-center rounded-full border-2 border-white">
                                                     <svg width="25" height="28" viewBox="0 0 25 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M24.6381 20.0875L22.7967 0.972266L3.67213 2.71444C3.47041 2.70614 3.26925 2.74127 3.08228 2.81747C2.89531 2.89367 2.7269 3.00915 2.58844 3.1561C2.44998 3.30304 2.34471 3.47802 2.27976 3.66918C2.2148 3.86035 2.19168 4.06324 2.21195 4.26411C2.23222 4.46499 2.29542 4.65917 2.39726 4.8335C2.49911 5.00783 2.63721 5.15825 2.80224 5.27456C2.96727 5.39088 3.15536 5.47038 3.35378 5.50768C3.55221 5.54498 3.75633 5.53922 3.95233 5.49078L18.2855 4.20763L1.0832 24.9674C0.844706 25.2552 0.73032 25.626 0.765195 25.9981C0.800069 26.3703 0.981353 26.7134 1.26916 26.9518C1.55698 27.1903 1.92774 27.3047 2.29989 27.2698C2.67205 27.235 3.0151 27.0537 3.25359 26.7659L20.4558 6.00609L21.858 20.3281C21.8943 20.7003 22.0769 21.0429 22.3657 21.2805C22.6545 21.5181 23.0259 21.6312 23.3981 21.595C23.7703 21.5588 24.1129 21.3762 24.3505 21.0874C24.5881 20.7986 24.7013 20.4272 24.6651 20.055L24.6381 20.0875Z" fill="white"/>
                                                     </svg>
@@ -359,21 +360,126 @@
 
                 </section>
 
-                <section x-data="{
-                    title:'Kisah Inspiratif dan Rencana Aksi Lingkungan'
-                }" class="pb-20">
-                    <h1 x-text="title" class="font-dmsans font-bold text-4xl text-[#B7351F] w-[55rem]  px-52 pb-10"></h1>
-                    <div  x-data="itemsList" class="swiper swiper2 w-screen">
-                        <div class="swiper-wrapper">
+                <section x-data="{ title:'Kisah Inspiratif dan Rencana Aksi Lingkungan' }" class="pb-20">
+
+                    <div  x-data="itemsList" class="swiper swiper2">
+                        <h1 x-text="title" class="font-clash-display font-semibold text-4xl text-[#B7351F] w-[55rem]  px-52 pb-10"></h1>
+                        <div class="swiper-wrapper transition-all duration-500">
                             <template x-for="item in itemsKisahInspiratif">
-                                <div class="swiper-slide flex justify-between w-96">
-                                    <img :src="item.image" alt="item.title">
-                                    <h1 x-text="item.title"></h1>
+                                <div class="swiper-slide transition-all duration-500  flex justify-center mx-auto">
+                                    <div class="flex flex-row items-center gap-10">
+                                        <img :src="item.image" alt="item.title" class="rounded-3xl h-[26rem] w-[50rem] object-cover">
+                                        <div class="flex flex-col gap-y-7">
+                                            <h1 x-text="item.title" class="font-dmsans font-medium text-4xl line-clamp-3 w-[27rem] font-clash-display"></h1>
+                                            <p x-text="item.desc" class="line-clamp-5 w-[34rem] text-[#394149] font-dmsans text-xl"></p>
+                                            <a href="#" class="bg-[#B7351F] rounded-full w-40 h-12 flex gap-2 justify-center items-center text-[#FFEDC6] font-medium text-lg font-clash-display">
+                                                Load More 
+                                                <svg width="13" height="13" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M2.02549 9.8811L8.99385 3.08773L8.9174 9.10001C8.91129 9.5805 9.30053 9.97976 9.78102 9.98587C9.89511 9.98744 10.0084 9.96649 10.1144 9.92422C10.2204 9.88196 10.317 9.8192 10.3987 9.73955C10.4804 9.6599 10.5456 9.56491 10.5905 9.46003C10.6355 9.35515 10.6593 9.24244 10.6606 9.12834L10.7639 1.00929C10.7654 0.895196 10.7445 0.781912 10.7022 0.675924C10.66 0.569936 10.5972 0.473325 10.5175 0.39162C10.4379 0.309917 10.3429 0.244724 10.238 0.199775C10.1332 0.154826 10.0204 0.131002 9.90634 0.129668L1.78729 0.0264314C1.67323 0.0249807 1.56 0.046012 1.45406 0.0883222C1.34812 0.130632 1.25156 0.193394 1.16988 0.273023C1.0882 0.352652 1.023 0.447591 0.978012 0.552416C0.933022 0.657242 0.909119 0.769902 0.907669 0.883965C0.906218 0.998028 0.927249 1.11126 0.969559 1.2172C1.01187 1.32313 1.07463 1.4197 1.15426 1.50138C1.23389 1.58306 1.32883 1.64825 1.43365 1.69324C1.53848 1.73823 1.65114 1.76214 1.7652 1.76359L7.77749 1.84004L0.809131 8.63341C0.466016 8.96791 0.458966 9.52232 0.793465 9.86543C1.12796 10.2085 1.68238 10.2156 2.02549 9.8811Z" fill="#FFEDC6"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </template>
                         </div>
-                        <button class="swiper-button-prev">prev</button>
-                        <button class="swiper-button-next">next</button>
+                        <div class="button-navigation transition-all duration-500 flex flex-row-reverse items-center absolute top-12 right-36 w-28">   
+                            <button class="swiper-button-next bg-[#B7351F] transition-all duration-500  h-10 w-10 flex justify-center p-2 rounded-full shadow-md">
+                                <svg class="icon-next" width="3" height="3" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.26997 19.2733C1.85831 19.2733 1.44664 19.1216 1.12164 18.7966C0.493307 18.1683 0.493307 17.1283 1.12164 16.5L7.62164 9.99997L1.12164 3.49997C0.493307 2.87164 0.493307 1.83164 1.12164 1.20331C1.74997 0.574972 2.78997 0.574972 3.41831 1.20331L11.0666 8.85164C11.695 9.47997 11.695 10.52 11.0666 11.1483L3.41831 18.7966C3.09331 19.1216 2.68164 19.2733 2.26997 19.2733Z" fill="#FFEDC6"/>
+                                </svg>
+                            </button>
+                            <button class="swiper-button-prev bg-[#B7351F] transition-all duration-500 rotate-180 h-10 w-10 flex justify-center p-2 rounded-full shadow-md">
+                                <svg class="icon-prev" width="3" height="3" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.26997 19.2733C1.85831 19.2733 1.44664 19.1216 1.12164 18.7966C0.493307 18.1683 0.493307 17.1283 1.12164 16.5L7.62164 9.99997L1.12164 3.49997C0.493307 2.87164 0.493307 1.83164 1.12164 1.20331C1.74997 0.574972 2.78997 0.574972 3.41831 1.20331L11.0666 8.85164C11.695 9.47997 11.695 10.52 11.0666 11.1483L3.41831 18.7966C3.09331 19.1216 2.68164 19.2733 2.26997 19.2733Z" fill="#FFEDC6"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <h1 class="font-dmsans font-light text-4xl w-[45rem] text-center mx-auto mt-40 bg-gradient-to-b from-[#B7351F] via-[#BD5240] to-transparent text-transparent bg-clip-text leading-[1.500]">Siap untuk memulai petualangan Anda berikutnya? Segera bergabung dengan Aksara Nusantara dan mulailah menjelajahi kekayaan budaya dan alam Indonesia bersama kami!</h1>
+                </section>
+
+                <section x-data="itemsList" class="bg-gradient-to-t from-[#FCD295] via-[#FCD295]  to-transparent  h-full flex pt-32 flex-col justify-end">
+                    <div class="relative flex flex-row items-top justify-between gap-5 px-40 pb-[40rem]">
+
+                        <div class="flex flex-col gap-5">
+                           <h1 x-data="{
+                            title:'Jadilah bagian dari kami untuk pengalaman yang tak terlupakan'
+                           }" x-text="title" class="font-dmsans font-normal text-3xl w-80 text-[#B7351F] leading-normal"></h1> 
+                           <button class="font-dmsans font-light flex flex-row gap-3 border border-[#B7351F] text-[#B7351F] w-40 h-11 justify-center items-center rounded-full">
+                                Join Us Now
+                                <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.13086 10.3092L9.74836 1.69232M9.74836 1.69232L2.02676 1.69232M9.74836 1.69232V9.41393" stroke="#B7351F" stroke-width="1.22422" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                           </button>
+                           <p class="text-[#B7351F] font-dmsans font-semibold pt-14 uppercase">Copyright © 2024. All rights reserved.</p>
+                        </div>
+
+                        <div class="flex flex-col gap-3">
+                            <template x-for="item in itemsFooterOptions1" :key="item.id">
+                                <div class="font-dmsans font-normal flex flex-col text-[#B7351F]">
+                                    <template x-if="item.title">
+                                        <a :href="item.url" x-text="item.title" class="text-3xl">
+                                        </a>
+                                    </template>
+                                </div>
+                            </template>
+                        </div>
+
+                        <div class="flex flex-col gap-5">
+                            <template x-for="item in itemsFooterOptions2">
+                                <div class="font-dmsans font-normal flex flex-col text-[#B7351F]">
+                                    <template x-if="item.title">
+                                        <a :href="item.url" x-text="item.title" class="text-3xl">
+                                        </a>
+                                    </template>
+                                    <template x-if="item.icons">
+                                        <div class="flex flex-row gap-3">
+                                            <template x-for="icon in item.icons">
+                                                <img :src="icon" :alt="icon" class="w-5 h-5">
+                                            </template>
+                                        </div>
+                                    </template>
+                                </div>
+                            </template>
+                        </div>
+
+                    </div>
+                    <div class="relative">
+                        <img src="../../../Asset/pura.svg" alt="" class="absolute -top-[33rem] -left-20 w-[60rem]">
+                        <img src="../../../Asset/borobudur.svg" alt="" class="absolute -top-[23rem] -right-52 w-[75rem]">
+                        <img src="../../../Asset/penari1.svg" alt="" class="absolute -top-[15rem] left-[35rem]">
+                        <img src="../../../Asset/penari2.svg" alt="" class="absolute -top-[15rem] right-[37rem]">
+                        <div class="bg-gradient-to-t from-[#89490B]/70 via-[#89490B]/80  to-[#89490B] h-[30rem]"></div>
+                        <div class="absolute bottom-0 border-t-2 whitespace-nowrap font-jost italic overflow-hidden gap-5 flex p-3 flex-row w-full text-white">
+                            <div class="flex flex-row gap-5 logos-slide">
+                                <h1>AKSARA NUSANTARA</h1>
+                                <h1>AKSARA NUSANTARA</h1>
+                                <h1>AKSARA NUSANTARA</h1>
+                                <h1>AKSARA NUSANTARA</h1>
+                                <h1>AKSARA NUSANTARA</h1>
+                                <h1>AKSARA NUSANTARA</h1>
+                                <h1>AKSARA NUSANTARA</h1>
+                            </div>
+                            <div class="flex flex-row gap-5 logos-slide">
+                                <h1>AKSARA NUSANTARA</h1>
+                                <h1>AKSARA NUSANTARA</h1>
+                                <h1>AKSARA NUSANTARA</h1>
+                                <h1>AKSARA NUSANTARA</h1>
+                                <h1>AKSARA NUSANTARA</h1>
+                                <h1>AKSARA NUSANTARA</h1>
+                                <h1>AKSARA NUSANTARA</h1>
+                            </div>
+                            <div class="flex flex-row gap-5 logos-slide">
+                                <h1>AKSARA NUSANTARA</h1>
+                                <h1>AKSARA NUSANTARA</h1>
+                                <h1>AKSARA NUSANTARA</h1>
+                                <h1>AKSARA NUSANTARA</h1>
+                                <h1>AKSARA NUSANTARA</h1>
+                                <h1>AKSARA NUSANTARA</h1>
+                                <h1>AKSARA NUSANTARA</h1>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </section>

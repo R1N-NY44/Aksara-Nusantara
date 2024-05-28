@@ -31,8 +31,8 @@ const KisahInspiratifCarousel = new Swiper(KisahInspiratifCarouselClassName,{
          slidesPerView: 1
      },
    },
-   slidesOffsetAfter: 210,
-   slidesOffsetBefore: 210,
+   //slidesOffsetAfter: 210,
+   //slidesOffsetBefore: 210,
    navigation: {
      nextEl:KisahInspiratifCarouselNext,
      prevEl:KisahInspiratifCarouselPrev

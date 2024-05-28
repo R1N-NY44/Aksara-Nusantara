@@ -56,6 +56,53 @@ document.addEventListener("alpine:init",()=>{
                 desc:"Dalam peringatan Hari Sumpah Pemuda ke-95, siswa SD se-Kecamatan Karimun memukau dengan pawai budaya yang meriah. Dengan penuh semangat, mereka mengenakan pakaian adat daerah dan menampilkan atraksi yang memukau di hadapan Bupati Aunur Rafiq dan para penyaksi. Bupati pun mengajak mereka untuk memaknai peringatan ini sebagai bentuk cinta kepada NKRI dan semangat membangun Kabupaten Karimun yang terus berkembang.",
                 image:"../../../Asset/upacara.jpg"
             }
+        ],
+        itemsFooterOptions1: [
+            {
+                id:1,
+                title:"Beranda",
+                url:"/beranda"
+            },
+            {
+                id:2,
+                title:"Galeri Budaya",
+                url:"/galeri_budaya"
+            },
+            {
+                id:3,
+                title:"Kuliner Nusantara",
+                url:"/kuliner_nusantara"
+            },
+            {
+                id:4,
+                title:"Kisah & Rencana",
+                url:"/kisah_rencana"
+            },
+        ],
+        itemsFooterOptions2: [
+            {
+                id:1,
+                title:"Newsletter",
+                url:"/newsletter"
+            },
+            {
+                id:2,
+                title:"Podcast",
+                url:"/podcast"
+            },
+            {
+                id:3,
+                title:"Press",
+                url:"/press"
+            },
+            {
+                id:4,
+                icons:[
+                    "../../../Asset/twitter.svg",
+                    "../../../Asset/instagram.svg",
+                    "../../../Asset/linkedin.svg"
+                ]
+            }
         ]
     }))
 })
