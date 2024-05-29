@@ -66,6 +66,16 @@
    opacity: 1;
 }
 
+.hidden-page{
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show-page{
+    opacity: 1;
+    transition: all 1s;
+}
+
 @keyframes slide {
     from{
       transform: translateX(0);

@@ -124,4 +124,24 @@ function isReload(){
     return window.location.reload()
 }
 
+const bodyTransition = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show-page")
+        } else {
+            entry.target.classList.remove("show-page")
+        }
+    })
+})
+const hiddenElements = document.querySelectorAll('.hidden-page');
+hiddenElements.forEach((el)=>bodyTransition.observe(el))
+
+const rightTranslateTransition = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if (entry.isIntersecting){
+            entry.target.classList.add("")   
+        }
+    })
+})
+
 
