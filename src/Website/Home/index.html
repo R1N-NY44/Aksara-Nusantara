@@ -49,7 +49,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>AksaraNusantara - Home</title>
 </head>
-<body class="hidden-page bg-[#FFEDC6]">
+<body class="bg-[#FFEDC6]" x-data="{ currentPage:'beranda'  }">
     <section id="desktop" class="bg-[#FFEDC6]">
         <header id="header" x-data="stickyNavbar" class="sticky z-50 top-0 bg-[#FFEDC6] left-0  px-10 py-10 w-full transition-transform"
         @scroll.window="handleScroll"
@@ -104,11 +104,11 @@
         <main class="overflow-x-hidden wrapper pt-20 background-image bg-no-repeat">
             <section class="w-full banner relative z-40">
                 <div class="w-screen bg-cover bg-no-repeat bg-top h-full flex flex-row justify-center items-bottom">
-                    <h2 class="font-berkshire-swash relative left-52 whitespace-nowrap text-stroke text-[#B7351F] stroke-[#5C0D00] text-[5rem]">
+                    <h2 class="font-berkshire-swash fade relative left-52 whitespace-nowrap text-stroke text-[#B7351F] stroke-[#5C0D00] text-[5rem]">
                         Jelajahi Keindahan
                     </h2>
                     <div class="flex h-[35rem]">
-                        <img src="../../../Asset/monas-update.svg" loading="lazy" decoding="async" class="h-full w-full  relative -bottom-5 z-10" alt="">
+                        <img src="../../../Asset/monas-update.svg" class="h-full w-full  relative -bottom-5 z-20 transition-element-top" alt="">
                         <!-- <svg class="h-full relative -bottom-5 z-10" width="400" viewBox="0 0 294 591" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_217_99)">
                             <path d="M194 510.062H111.591L100 510.401L101.546 487.583L127.816 107.401H168.119L182.412 328.935L182.925 336.677L194 510.062Z" fill="#F4DBBD"/>
@@ -148,12 +148,12 @@
                             </defs>
                         </svg> -->
                     </div>
-                    <h2 class="font-berkshire-swash relative right-52 whitespace-nowrap text-stroke text-[#B7351F] stroke-[#5C0D00] text-[5rem]">
+                    <h2 class="font-berkshire-swash fade relative right-52 whitespace-nowrap text-stroke text-[#B7351F] stroke-[#5C0D00] text-[5rem]">
                         Budaya Indonesia
                     </h2>
                 </div>
                 <section class="relative  h-96 flex flex-row banner-content bg-[#FCD295]">
-                        <img src="../../../Asset/bali-new.svg" loading="lazy" decoding="async"  alt="" class="absolute left-0 -top-[28rem] w-[25%]"/>
+                        <img src="../../../Asset/bali-new.svg" loading="lazy" decoding="async"  alt="" class="absolute transition-element-left  left-0 -top-[28rem] w-[25%]"/>
                         <!-- <svg viewBox="0 0 366 373" class=""  fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M293.085 329.578H238.443L256.637 213.798H274.889L293.085 329.578Z" fill="#603813"/>
                             <path d="M256.265 203.738C252.151 206.456 241.743 217.26 241.743 217.26C241.743 217.26 247.192 226.498 248.822 227.095C250.165 227.587 261.14 227.626 264.944 227.626V227.722C264.944 227.722 280.751 227.788 282.377 227.193C284.005 226.596 289.458 217.356 289.458 217.356C289.458 217.356 279.048 206.547 274.936 203.836C272.623 202.312 265.001 200.018 265.001 200.018L256.261 203.736L256.265 203.738Z" fill="#9C2525"/>
@@ -237,68 +237,69 @@
                             </g>
                         </svg> -->
                         <div>
-                            <img src="../../../Asset/rumah-padang.svg" loading="lazy" decoding="async" alt="" class="absolute -top-80 left-[26.5rem] z-20 w-[23%]">
-                            <img src="../../../Asset/person2-new.svg" alt="" loading="lazy" decoding="async" class="absolute bottom-48 left-[24%] w-[5%] z-20">
+                            <img src="../../../Asset/rumah-padang.svg" loading="lazy" decoding="async" alt="" class="absolute transition-element-top  -top-80 left-[26.5rem] z-20 w-[23%]">
+                            <img src="../../../Asset/person2-new.svg" alt="" loading="lazy" decoding="async" class="absolute transition-element-top  bottom-48 left-[24%] w-[5%] z-20">
                         </div>
                         
-                        <img src="../../../Asset/sby-new.svg" alt="" loading="lazy" decoding="async" class="left-24 absolute w-[15%] top-[-45%]">
-                        <img src="../../../Asset/person1-new.svg" alt="" loading="lazy" decoding="async" class="absolute bottom-10 left-20 w-[10%]">
+                        <img src="../../../Asset/sby-new.svg" alt="" loading="lazy" decoding="async" class="left-24 transition-element-left  absolute w-[15%] top-[-45%]">
+                        <img src="../../../Asset/person1-new.svg" alt="" loading="lazy" decoding="async" class="absolute transition-element-left  bottom-10 left-20 w-[10%]">
 
-                        <img src="../../../Asset/kubah.svg" loading="lazy" decoding="async" alt="" class="absolute right-[3%] -top-[120%] w-[35%]">
-                        <img src="../../../Asset/minang.svg" loading="lazy" decoding="async" alt="" class="-top-44 z-20 absolute right-[30%] w-[18%]">
-                        <img src="../../../Asset/bdg-new.svg" loading="lazy" decoding="async" alt="" class="absolute right-[-3%] top-[-51%] w-[25%]">
+                        <img src="../../../Asset/kubah.svg" loading="lazy" decoding="async" alt="" class="absolute right-[3%] transition-element-right -top-[120%] w-[35%]">
+                        <img src="../../../Asset/minang.svg" loading="lazy" decoding="async" alt="" class="-top-44  transition-element-top z-20 absolute right-[30%] w-[18%]">
+                        <img src="../../../Asset/bdg-new.svg" loading="lazy" decoding="async" alt="" class="absolute transition-element-right right-[-3%] top-[-51%] w-[25%]">
 
-                        <img src="../../../Asset/person3-new.svg" loading="lazy" decoding="async" alt="" class="absolute left-[40rem] z-20 bottom-24 w-[5%]">
+                        <img src="../../../Asset/person3-new.svg" loading="lazy" decoding="async" alt="" class=" transition-element-top absolute left-[40rem] z-20 bottom-24 w-[5%]">
 
-                        <img src="../../../Asset/person4-new.svg" loading="lazy" decoding="async" alt="" class="absolute left-[50rem] bottom-11 w-[12%]">
+                        <img src="../../../Asset/person4-new.svg" loading="lazy" decoding="async" alt="" class=" transition-element-top absolute left-[50rem] bottom-11 w-[12%]">
 
-                        <img src="../../../Asset/person5-new.svg" loading="lazy" decoding="async" alt="" class="absolute right-[40%] z-20 w-[8%] bottom-52">
+                        <img src="../../../Asset/person5-new.svg" loading="lazy" decoding="async" alt="" class=" transition-element-top absolute right-[40%] z-20 w-[8%] bottom-52">
 
-                        <img src="../../../Asset/person7-new.svg" loading="lazy" decoding="async"  alt="" class="absolute right-[35%] bottom-14 w-[3%]">
+                        <img src="../../../Asset/person7-new.svg" loading="lazy" decoding="async"  alt="" class="absolute right-[35%] transition-element-top bottom-14 w-[3%]">
 
-                        <img src="../../../Asset/person6-new.svg" loading="lazy" decoding="async" alt="" class="absolute right-[28%] bottom-20 w-[7%]">
+                        <img src="../../../Asset/person6-new.svg" loading="lazy" decoding="async" alt="" class="absolute right-[28%] transition-element-top bottom-20 w-[7%]">
 
-                        <img src="../../../Asset/person8-new.svg" loading="lazy" decoding="async" alt="" class="absolute right-[20%] w-[11%]">
-                        <img src="../../../Asset/person9.svg" alt="" loading="lazy" decoding="async"  class="right-[15%] absolute bottom-24 w-[5.5%]">
-                        <img src="../../../Asset/person10-new.svg" loading="lazy" decoding="async" alt="" class="absolute right-[5%] bottom-16 w-[4.5%]">
+                        <img src="../../../Asset/person8-new.svg" loading="lazy" decoding="async" alt="" class="absolute right-[20%] w-[11%]  transition-element-top ">
+                        <img src="../../../Asset/person9.svg" alt="" loading="lazy" decoding="async"  class="right-[15%] absolute transition-element-right bottom-24 w-[5.5%]">
+                        <img src="../../../Asset/person10-new.svg" loading="lazy" decoding="async" alt="" class="absolute right-[5%] bottom-16 transition-element-right w-[4.5%]">
                 </section>
                 <section class="flex flex-row bg-[#FCD295] justify-between relative h-96 before:w-full before:bg-gradient-to-b from-transparent to-[#FFEDC6] to-100% before:z-20">
-                            <img src="../../../Asset/daun1.svg" loading="lazy" decoding="async" alt="" class="w-[30rem] absolute -left-40 -bottom-10 rotate-45">
-                            <img src="../../../Asset/bunga.svg" loading="lazy" decoding="async" alt="" class="w-[22.5rem] absolute left-0 -bottom-16 z-10">
-                            <img src="../../../Asset/daun2.svg" loading="lazy" decoding="async" alt="" class="w-[24rem] absolute  -bottom-12 left-[13.5rem] rotate-[28deg]">
-                            <img src="../../../Asset/daun5.svg" loading="lazy" decoding="async" alt="" class="w-[22.5rem] absolute -bottom-16 left-[27rem]">
-                            <img src="../../../Asset/daun6.svg" loading="lazy" decoding="async" alt="" class="w-[23rem] absolute -bottom-14 left-[35rem] z-10">
-                            <img src="../../../Asset/daun3.svg" loading="lazy" decoding="async" alt="" class="w-[24rem] absolute -bottom-14 left-[47rem]">
-                            <img src="../../../Asset/nasiuduk.svg" loading="lazy" decoding="async" alt="" class="w-[24rem] absolute -bottom-14 left-[63rem]">
-                            <img src="../../../Asset/daun4.svg" loading="lazy" decoding="async" alt="" class="w-[27rem] absolute -bottom-12 left-[73rem]">
-                            <img src="../../../Asset/tumpeng.svg" loading="lazy" decoding="async" alt="" class="w-[27rem] absolute -bottom-14 -right-[1rem] -rotate-12">
+                            <img src="../../../Asset/daun1.svg" loading="lazy" decoding="async" alt="" class="w-[30rem] transition-element-bottom  absolute -left-40 -bottom-10 rotate-45">
+                            <img src="../../../Asset/bunga.svg" loading="lazy" decoding="async" alt="" class="w-[22.5rem] transition-element-bottom  absolute left-0 -bottom-16 z-10">
+                            <img src="../../../Asset/daun2.svg" loading="lazy" decoding="async" alt="" class="w-[24rem] transition-element-bottom  absolute  -bottom-12 left-[13.5rem] rotate-[28deg]">
+                            <img src="../../../Asset/daun5.svg" loading="lazy" decoding="async" alt="" class="w-[22.5rem] transition-element-bottom  absolute -bottom-16 left-[27rem]">
+                            <img src="../../../Asset/daun6.svg" loading="lazy" decoding="async" alt="" class="w-[23rem] transition-element-bottom  absolute -bottom-14 left-[35rem] z-10">
+                            <img src="../../../Asset/daun3.svg" loading="lazy" decoding="async" alt="" class="w-[24rem] transition-element-bottom  absolute -bottom-14 left-[47rem]">
+                            <img src="../../../Asset/nasiuduk.svg" loading="lazy" decoding="async" alt="" class="w-[24rem] transition-element-bottom  absolute -bottom-14 left-[63rem]">
+                            <img src="../../../Asset/daun4.svg" loading="lazy" decoding="async" alt="" class="w-[27rem] transition-element-bottom  absolute -bottom-12 left-[73rem]">
+                            <img src="../../../Asset/tumpeng.svg" loading="lazy" decoding="async" alt="" class="w-[27rem] transition-element-bottom absolute -bottom-14 -right-[1rem] -rotate-12">
                 </section>
             </section>
             <section class="transition-all bg-[#FFEDC6] z-30">
 
                 <h1 x-data="{
                     text: 'Temukan dan eksplorasi ragam budaya, kuliner, serta kisah inspiratif dalam sebuah perjalanan digital yang menginspirasi.'
-                }" x-text="text" class="font-dmsans text-4xl italic text-center w-[41rem] mx-auto mt-20 bg-gradient-to-b from-[#B7351F] via-[#BD5240] to-transparent text-transparent bg-clip-text leading-[1.500]">
+                }" x-text="text" class="font-dmsans text-4xl italic text-center w-[41rem] mx-auto mt-20 bg-gradient-to-b from-[#B7351F] via-[#BD5240] to-transparent text-transparent bg-clip-text leading-[1.500] transition-fade-element-top">
                 </h1>
 
                 <section class="px-52 py-28 relative">
                     <h1 x-data="{
                         text: 'Galeri Budaya'
-                    }" x-text="text" class=" font-clash-display font-semibold text-4xl text-[#B7351F]"></h1>
-                    <p class="w-[45rem] font-dmsans text-[#858B76] text-xl py-5">Menyajikan koleksi foto dan video berkualitas tinggi yang memperkenalkan berbagai aspek budaya Indonesia. Dari tradisi hingga keindahan alam, setiap gambar dan klip video memperlihatkan kekayaan dan keunikan budaya yang memikat hati dan pikiran.</p>
+                    }" x-text="text" class=" font-clash-display font-semibold text-4xl text-[#B7351F] transition-fade-element-top"></h1>
+                    <p class="w-[45rem] font-dmsans text-[#858B76] text-xl py-5 transition-fade-element-top">Menyajikan koleksi foto dan video berkualitas tinggi yang memperkenalkan berbagai aspek budaya Indonesia. Dari tradisi hingga keindahan alam, setiap gambar dan klip video memperlihatkan kekayaan dan keunikan budaya yang memikat hati dan pikiran.</p>
                     <div class="grid grid-cols-2 text-center gap-5 relative">
-                        <div class="relative col-span-2">
+                        <div class="spacer"></div>
+                        <div class="relative col-span-2 transition-fade-element-right">
                             <div class="absolute flex flex-col items-start bottom-14 gap-y-4 z-30 left-14 font-dmsans text-white">
                                 <h1 class="font-bold text-4xl">Daerah</h1>
                                 <p class="w-[60%] text-left text-xl">Telusuri  galeri berdasarkan berbagai macam daerah di Indonesia.
                                 </p>
                             </div>
 
-                            <div class="before:w-full before:bg-gradient-to-b from-transparent to-black to-100% before:z-20 before:h-full before:absolute before:left-0 before:rounded-2xl">
+                            <div class="before:w-full before:bg-gradient-to-b from-transparent to-black to-100% transition-element-x before:z-20 before:h-full before:absolute before:left-0 before:rounded-2xl">
                                 <img src="../../../Asset/cultureBali_01.png" loading="lazy" decoding="async" alt="" class="rounded-2xl h-[40rem] w-full object-bottom object-cover">
                             </div>
                         </div>
-                        <div class="relative">
+                        <div class="relative transition-fade-element-right">
                             <div class="absolute flex flex-col items-start bottom-14 gap-y-4 z-30 left-14 font-dmsans text-white">
                                 <h1 class="font-bold text-4xl">Tema</h1>
                                 <p class="w-[60%] text-left text-xl">Temukan galeri berdasarkan tema tertentu, seperti seni tradisional atau upacara adat.
@@ -308,7 +309,7 @@
                                 <img loading="lazy" decoding="async" src="../../../Asset/wayang.png" alt="" class="rounded-xl">
                             </div>
                         </div>
-                        <div class="relative">
+                        <div class="relative transition-fade-element-right">
                             <div class="absolute flex flex-col items-start bottom-14 gap-y-4 z-30 left-14 font-dmsans text-white">
                                 <h1 class="font-bold text-4xl">Jenis Budaya</h1>
                                 <p class="w-[60%] text-left text-xl">Telusuri galeri berdasarkan jenis budaya, seperti rumah adat atau kerajinan tangan lokal.
@@ -319,9 +320,10 @@
                                 <img loading="lazy" decoding="async" src="../../../Asset/topeng.png" alt="" class="rounded-xl">
                             </div>
                         </div>
+                        <div class="spacer"></div>
                     </div>
-                    <img src="../../../Asset/awans1.svg" loading="lazy" decoding="async" alt="" class="absolute bottom-5 z-30 left-0 w-[27rem]">
-                    <img src="../../../Asset/awans2.svg" loading="lazy" decoding="async" alt="" class="absolute bottom-5 z-30 right-0 w-[27rem]">
+                    <img src="../../../Asset/awans1.svg" loading="lazy" decoding="async" alt="" class="absolute transition-fade-element-left bottom-5 z-30 left-0 w-[27rem]">
+                    <img src="../../../Asset/awans2.svg" loading="lazy" decoding="async" alt="" class="absolute transition-fade-element-right bottom-5 z-30 right-0 w-[27rem]">
                 </section>
                     
                 <section class="pt-24 relative h-[50rem]" x-data="itemsList"
@@ -329,14 +331,14 @@
                     <h1 x-data="{
 
                         text:'Kuliner Nusantara'
-                    }" x-text="text" class="font-clash-display font-semibold text-4xl text-[#B7351F] px-52" >
+                    }" x-text="text" class="font-clash-display font-semibold text-4xl text-[#B7351F] px-52 transition-fade-element-top" >
                     </h1>
                     <p x-data="{
                         text:'Eksplor kekayaan ragam kuliner Indonesia, termasuk resep autentik, cerita tentang makanan, dan rekomendasi tempat makan terkenal.'
-                    }" x-text="text" class="font-dmsans text-[#858B76] text-xl py-5 px-52 w-[56rem]"></p>
+                    }" x-text="text" class="font-dmsans text-[#858B76] text-xl py-5 px-52 w-[56rem] transition-fade-element-top"></p>
 
 
-                    <div class="swiper swiper1">
+                    <div class="swiper swiper1 transition-fade-element-right">
                         <div class="swiper-wrapper">
                             <template x-for="item in itemsKulinerNusantara" :key="item.id">
                                 <div class="swiper-slide rounded-2xl overflow-hidden h-full group">
@@ -365,8 +367,8 @@
                 <section x-data="{ title:'Kisah Inspiratif dan Rencana Aksi Lingkungan' }" class="pb-20">
 
                     <div  x-data="itemsList" class="swiper swiper2">
-                        <h1 x-text="title" class="font-clash-display font-semibold text-4xl text-[#B7351F] w-[55rem]  px-52 pb-10"></h1>
-                        <div class="swiper-wrapper transition-all duration-500">
+                        <h1 x-text="title" class="font-clash-display font-semibold text-4xl text-[#B7351F] w-[55rem]  px-52 pb-10 transition-fade-element-left"></h1>
+                        <div class="swiper-wrapper transition-all duration-500 transition-fade-element-right">
                             <template x-for="item in itemsKisahInspiratif">
                                 <div class="swiper-slide transition-all duration-500  flex justify-center mx-auto">
                                     <div class="flex flex-row items-center gap-10">
@@ -386,25 +388,25 @@
                             </template>
                         </div>
                         <div class="button-navigation transition-all duration-500 flex flex-row-reverse items-center absolute top-12 right-36 w-28">   
-                            <button class="swiper-button-next bg-[#B7351F] transition-all duration-500  h-10 w-10 flex justify-center p-2 rounded-full shadow-md">
+                            <button class="swiper-button-next bg-[#B7351F] transition-fade-element-right transition-all duration-500  h-10 w-10 flex justify-center p-2 rounded-full shadow-md">
                                 <svg class="icon-next" width="3" height="3" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.26997 19.2733C1.85831 19.2733 1.44664 19.1216 1.12164 18.7966C0.493307 18.1683 0.493307 17.1283 1.12164 16.5L7.62164 9.99997L1.12164 3.49997C0.493307 2.87164 0.493307 1.83164 1.12164 1.20331C1.74997 0.574972 2.78997 0.574972 3.41831 1.20331L11.0666 8.85164C11.695 9.47997 11.695 10.52 11.0666 11.1483L3.41831 18.7966C3.09331 19.1216 2.68164 19.2733 2.26997 19.2733Z" fill="#FFEDC6"/>
                                 </svg>
                             </button>
-                            <button class="swiper-button-prev bg-[#B7351F] transition-all duration-500 rotate-180 h-10 w-10 flex justify-center p-2 rounded-full shadow-md">
+                            <button class="swiper-button-prev bg-[#B7351F] transition-fade-element-right transition-all duration-500 rotate-180 h-10 w-10 flex justify-center p-2 rounded-full shadow-md">
                                 <svg class="icon-prev" width="3" height="3" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.26997 19.2733C1.85831 19.2733 1.44664 19.1216 1.12164 18.7966C0.493307 18.1683 0.493307 17.1283 1.12164 16.5L7.62164 9.99997L1.12164 3.49997C0.493307 2.87164 0.493307 1.83164 1.12164 1.20331C1.74997 0.574972 2.78997 0.574972 3.41831 1.20331L11.0666 8.85164C11.695 9.47997 11.695 10.52 11.0666 11.1483L3.41831 18.7966C3.09331 19.1216 2.68164 19.2733 2.26997 19.2733Z" fill="#FFEDC6"/>
                                 </svg>
                             </button>
                         </div>
                     </div>
-                    <h1 class="font-dmsans font-light text-4xl w-[45rem] text-center mx-auto mt-40 bg-gradient-to-b from-[#B7351F] via-[#BD5240] to-transparent text-transparent bg-clip-text leading-[1.500]">Siap untuk memulai petualangan Anda berikutnya? Segera bergabung dengan Aksara Nusantara dan mulailah menjelajahi kekayaan budaya dan alam Indonesia bersama kami!</h1>
+                    <h1 class="font-dmsans font-light text-4xl w-[45rem] text-center mx-auto mt-40 transition-fade-element-top  bg-gradient-to-b from-[#B7351F] via-[#BD5240] to-transparent text-transparent bg-clip-text leading-[1.500]">Siap untuk memulai petualangan Anda berikutnya? Segera bergabung dengan Aksara Nusantara dan mulailah menjelajahi kekayaan budaya dan alam Indonesia bersama kami!</h1>
                 </section>
 
                 <section x-data="itemsList" class="bg-gradient-to-t from-[#FCD295] via-[#FCD295]  to-transparent  h-full flex pt-32 flex-col justify-end">
                     <div class="relative flex flex-row items-top justify-between gap-5 px-40 pb-[40rem]">
 
-                        <div class="flex flex-col gap-5">
+                        <div class="flex flex-col gap-5 transition-fade-element-left">
                            <h1 x-data="{
                             title:'Jadilah bagian dari kami untuk pengalaman yang tak terlupakan'
                            }" x-text="title" class="font-dmsans font-normal text-3xl w-80 text-[#B7351F] leading-normal"></h1> 
@@ -417,7 +419,7 @@
                            <p class="text-[#B7351F] font-dmsans font-semibold pt-14 uppercase">Copyright © 2024. All rights reserved.</p>
                         </div>
 
-                        <div class="flex flex-col gap-3">
+                        <div class="flex flex-col gap-3 transition-fade-element-left">
                             <template x-for="item in itemsFooterOptions1" :key="item.id">
                                 <div class="font-dmsans font-normal flex flex-col text-[#B7351F]">
                                     <template x-if="item.title">
@@ -428,7 +430,7 @@
                             </template>
                         </div>
 
-                        <div class="flex flex-col gap-5">
+                        <div class="flex flex-col gap-5 transition-fade-element-left">
                             <template x-for="item in itemsFooterOptions2">
                                 <div class="font-dmsans font-normal flex flex-col text-[#B7351F]">
                                     <template x-if="item.title">
@@ -448,10 +450,10 @@
 
                     </div>
                     <div class="relative">
-                        <img src="../../../Asset/pura.svg" loading="lazy" decoding="async" alt="" class="absolute -top-[33rem] -left-20 w-[60rem]">
-                        <img src="../../../Asset/borobudur.svg" loading="lazy" decoding="async" alt="" class="absolute -top-[23rem] -right-52 w-[75rem]">
-                        <img src="../../../Asset/penari1.svg" loading="lazy" decoding="async" alt="" class="absolute -top-[15rem] left-[35rem]">
-                        <img src="../../../Asset/penari2.svg" loading="lazy" decoding="async" alt="" class="absolute -top-[15rem] right-[37rem]">
+                        <img src="../../../Asset/pura.svg" loading="lazy" decoding="async" alt="" class="absolute -top-[33rem] -left-20 w-[60rem] transition-fade-element-left">
+                        <img src="../../../Asset/borobudur.svg" loading="lazy" decoding="async" alt="" class="absolute -top-[23rem] -right-52 w-[75rem] transition-fade-element-right">
+                        <img src="../../../Asset/penari1.svg" loading="lazy" decoding="async" alt="" class="absolute -top-[15rem] left-[35rem] transition-fade-element-left">
+                        <img src="../../../Asset/penari2.svg" loading="lazy" decoding="async" alt="" class="absolute -top-[15rem] right-[37rem] transition-fade-element-right">
                         <div class="bg-gradient-to-t from-[#89490B]/70 via-[#89490B]/80  to-[#89490B] h-[30rem]"></div>
                         <div class="absolute bottom-0 border-t-2 whitespace-nowrap font-jost italic text-xl overflow-hidden gap-5 flex p-3 flex-row w-full text-white">
                             <div class="flex flex-row gap-5 logos-slide">
@@ -496,5 +498,7 @@
     </section>
     <script src="./Asset/JS/home.js"></script>
     <script type="module" src="./Asset/JS/swiper-home.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 </body>
 </html>

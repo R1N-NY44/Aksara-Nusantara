@@ -124,24 +124,159 @@ function isReload(){
     return window.location.reload()
 }
 
-const bodyTransition = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show-page")
-        } else {
-            entry.target.classList.remove("show-page")
-        }
+document.addEventListener('DOMContentLoaded',()=>{
+    gsap.registerPlugin(ScrollTrigger);
+
+    const body = document.body
+    gsap.fromTo(body,{
+        opacity:0,
+        y:-10
+    },{
+        opacity:1,
+        y:0,
+        duration:1
     })
-})
-const hiddenElements = document.querySelectorAll('.hidden-page');
-hiddenElements.forEach((el)=>bodyTransition.observe(el))
 
-const rightTranslateTransition = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-        if (entry.isIntersecting){
-            entry.target.classList.add("")   
-        }
+    const elementsFadeRightTransition = document.querySelectorAll(".transition-fade-element-right")
+    elementsFadeRightTransition.forEach((element,index)=>{
+        gsap.fromTo(element,
+           {
+            opacity: 0,
+            x: 200
+           },
+           {
+            opacity:1,
+            x:0,
+            duration:1,
+            delay:index * 0.5,
+            scrollTrigger: {
+                trigger: element,
+                start: "top 80%", // ketika bagian atas kotak mencapai 80% dari tinggi viewport
+                end: "top 30%", // ketika bagian atas kotak mencapai 20% dari tinggi viewport
+                scrub: 1, // scrubbing halus, membutuhkan 1 detik untuk menyesuaikan
+                //markers: true, // aktifkan marker untuk debugging
+                once:true
+            }
+           } 
+        )
     })
+
+    const elementsFadeLeftTransition = document.querySelectorAll(".transition-fade-element-left")
+    elementsFadeLeftTransition.forEach((element,index)=>{
+        gsap.fromTo(element,
+           {
+            opacity: 0,
+            x: -200
+           },
+           {
+            opacity:1,
+            x:0,
+            duration:1,
+            delay:index * 0.5,
+            scrollTrigger: {
+                trigger: element,
+                start: "top 80%", // ketika bagian atas kotak mencapai 80% dari tinggi viewport
+                end: "top 30%", // ketika bagian atas kotak mencapai 20% dari tinggi viewport
+                scrub: 1, // scrubbing halus, membutuhkan 1 detik untuk menyesuaikan
+                //markers: true, // aktifkan marker untuk debugging
+                once:true
+            }
+           } 
+        )
+    })
+
+    const elementsFadeTopTransition = document.querySelectorAll(".transition-fade-element-top")
+    elementsFadeTopTransition.forEach((element,index)=>{
+        gsap.fromTo(element,
+           {
+            opacity: 0,
+            y: -200
+           },
+           {
+            opacity:1,
+            y:0,
+            duration:1,
+            delay:index * 0.5,
+            scrollTrigger: {
+                trigger: element,
+                start: "top 80%", // ketika bagian atas kotak mencapai 80% dari tinggi viewport
+                end: "top 30%", // ketika bagian atas kotak mencapai 20% dari tinggi viewport
+                scrub: 1, // scrubbing halus, membutuhkan 1 detik untuk menyesuaikan
+                //markers: true, // aktifkan marker untuk debugging
+                once:true
+            }
+           } 
+        )
+    })
+
+    const elementsBottomTransition = document.querySelectorAll(".transition-fade-element-bottom")
+    elementsBottomTransition.forEach((element,index)=>{
+        gsap.fromTo(element,
+           {
+            opacity: 0,
+            y: 100
+           },
+           {
+            opacity:1,
+            y:0,
+            duration:1,
+            delay:index * 0.5,
+            scrollTrigger: {
+                trigger: element,
+                start: "top 80%", // ketika bagian atas kotak mencapai 80% dari tinggi viewport
+                end: "top 30%", // ketika bagian atas kotak mencapai 20% dari tinggi viewport
+                scrub: 1, // scrubbing halus, membutuhkan 1 detik untuk menyesuaikan
+                //markers: true, // aktifkan marker untuk debugging
+                once:true
+            }
+           } 
+        )
+    })
+
+    const elementLeftTransition = document.querySelectorAll(".transition-element-left")
+    elementLeftTransition.forEach((element,index)=>{
+        gsap.fromTo(element,
+            {
+                x:-500
+            },
+            {
+                x:0,
+                duration:0.5,
+                delay:index * 0.3,
+            }
+        )
+    })
+
+    const elementRightTransition = document.querySelectorAll(".transition-element-right")
+    elementRightTransition.forEach((element,index)=>{
+        gsap.fromTo(element,
+            {
+                x:500
+            },
+            {
+                x:0,
+                duration:0.5,
+                delay:index * 0.3,
+            }
+        )
+    })
+
+    const elementTopTransition = document.querySelectorAll(".transition-element-top")
+    elementTopTransition.forEach((element,index)=>{
+        gsap.fromTo(element,
+            {
+                y:-150,
+                opacity:0
+            },
+            {
+                y:0,
+                opacity:1,
+                duration:0.5,
+                delay:index * 0.3,
+            }
+        )
+    })
+
+
+
 })
-
-
